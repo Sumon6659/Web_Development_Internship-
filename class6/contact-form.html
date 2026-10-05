@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<body>
+    <h1>Contact with us</h1>
+    <p>fill up the form below,we will respond as soon as porssible</p>
+    <form action="/contact" method="post">
+        <fieldest>
+            <legend>Your Information</legend>
+
+            <P>
+                <lebel for="name">Full name</lebel><br/>
+                <input type ="text" id="name" name="name" required minlength="3" placeholder="Hanjala Sumon"/>
+            </P>
+
+            <p>
+                <lebel for="email">Email</lebel><br/>
+                <input type ="email" id="email" name="email" required placeholder="example@example.com"/>
+            </p>
+            <p>
+                <lebel for="phone">Phone</lebel><br/>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="01799099004"/>
+            </p>
+
+        </fieldest>
+        <fieldset>
+            <legend>Message</legend>
+            <p>
+                <lebel for="subject">Subject</lebel>
+                <select id="subject" name="subject" required>
+                    <option value="">--Select a subject--</option>
+                    <option value="general">General question</option>
+                    <option value="support"> TechnicalSupport</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </p>
+            <p>
+                <lebel for="msg"> Your Message</lebel><br/>
+                <textarea id="msg" name="msg" rows="5" cols="40" minlength="10" ></textarea>
+            </p>
+
+        </fieldset>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">clear</button>
+    </form>
+
+</body>
+</html>

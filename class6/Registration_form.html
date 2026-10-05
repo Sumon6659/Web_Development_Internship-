@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>New accont create</h1>
+
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p>
+                <label for="name">Full name:</label><br/>
+                <input type="text" id="name" name="name" required minlength="3" />
+            </p>
+            <p>
+                <label for="email">Email:</label><br/>
+                <input type="email" id="email" name="email" required />
+            </p>
+            <p>
+                <label for="phone">Phone</label><br/>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" />
+            </p>
+            <p>
+                <label for="password">Password:</label><br/>
+                <input type="password" id="password" name="password" required minlength="6" />
+            </p>
+             <p>
+                <label for="dob">Date of Birth:</label><br/>
+                <input type="date" id="dob" name="dob"  />
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Onnanno</legend>
+            <P>
+                Gender:<br/>
+                <input type="radio" id="m" name="gender" value="male" />
+                <label for="m">Male</label>
+                <input type="radio" id="f" name="gender" value="female" />
+                <label for="f">Female</label>
+
+            </P>
+            <p>
+                <lebel for="city">City</lebel>
+                <select id="city" name="city" >
+                    <option value="">--Select a city--</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                    <option value="khulna">Khulna</option>
+                    <option value="rajshahi">Rajshahi</option>
+                </select>
+            </p>
+            <p>
+                Hobbies:<br/>
+                <input type="checkbox" id="h1" name="hobby" value="reading" />
+                <label for="h1">Reading</label>
+                <input type="checkbox" id="h2" name="hobby" value="coding" />
+                <label for="h2">Coding</label>
+                <input type="checkbox" id="h3" name="hobby" value="travelling" />
+                <label for="h3">Travelling</label>
+
+            </p>
+            <p>
+                <label for="profile">Profile Picture:</label><br/>
+                <input type="file" id="pic" name="pic" accept="image/*" />
+            </p>
+            <p>
+                <lebel for="exp">Experience(years):</lebel><br/>
+                <input type="range" id="exp" name="exp" min="0" max="20" value="1" />
+
+
+            </p>
+            <p>
+                <label for="colour">Favorite Color:</label><br/>
+                <input type="color" id="colour" name="colour" />
+            </p>
+            <p>
+                <lebel for="about">about you</lebel><br/>
+                <textarea id="about" name="about" rows="5" cols="40" ></textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="tos" required/>
+                <label for="tos">I agree to the terms of service</label>
+
+            </p>
+        
+        </fieldset>
+        <buttobn type="submit">Register</button>
+        <button type="reset">Clear</button>
+        </form>    
+        
+</body>
+</html>
