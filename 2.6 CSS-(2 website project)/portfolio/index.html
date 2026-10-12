@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- পেজের মেটা ট্যাগ ও এনকোডিং -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Hanjala Sumon - CSE Student Portfolio</title>
+    <!-- মূল এক্সটার্নাল CSS ফাইল লিংক -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== হেডার ও নেভিগেশন বার ==================== -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- ব্র্যান্ড লোগো / নাম -->
+                <a href="index.html" class="brand-logo">
+                    Hanjala Sumon<span>.dev</span>
+                </a>
+
+                <!-- পেজ লিঙ্কসমূহ (বর্তমান পেজে 'active' ক্লাস রয়েছে) -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== মূল কনটেন্ট (Main Content) ==================== -->
+    <main>
+        <div class="container">
+            <!-- হিরো সেকশন (Hero Section) -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <span class="hero-badge">👋 Welcome to my portfolio</span>
+                    <h1 class="hero-title">
+                        Hi, I'm <span>Hanjala Sumon</span>
+                    </h1>
+                    <p class="hero-description">
+                        An enthusiastic Computer Science & Engineering (CSE) student passionate about software
+                        development, problem solving, and modern web technologies. Constantly learning and building
+                        innovative solutions.
+                    </p>
+                    <!-- কল টু অ্যাকশন বাটনসমূহ -->
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary">View Projects</a>
+                        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- প্রোফাইল ভিজ্যুয়াল / নিজের ছবি সেকশন (Profile Photo Area) -->
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <!-- ব্যাকগ্রাউন্ড গ্লো ইফেক্ট -->
+                        <div class="avatar-glow"></div>
+                        
+                        <!-- প্রোফাইল ফটো ফ্রেম -->
+                        <div class="avatar-container" title="Hanjala Sumon">
+                            <img src="Hanjala.png" alt="Hanjala Sumon" class="avatar-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+                            <div class="avatar-fallback" id="avatar-fallback" style="display: none;">
+                                <span class="avatar-text">CSE</span>
+                            </div>
+                        </div>
+
+                        <!-- ফ্লোটিং স্ট্যাটাস ব্যাজ -->
+                        <div class="avatar-badge">
+                            <span class="status-dot"></span>
+                            <span>Open to Opportunities</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- কুইক হাইলাইটস সেকশন (Highlights Section) -->
+            <section class="highlights-section">
+                <h2 class="section-heading-sm">What I Focus On</h2>
+                <div class="highlights-grid">
+                    <article class="highlight-card">
+                        <h3>💻 Problem Solving</h3>
+                        <p>Strengthening knowledge in Data Structures & Algorithms and actively practicing on various
+                            competitive programming platforms.</p>
+                    </article>
+
+                    <article class="highlight-card">
+                        <h3>🌐 Web Development</h3>
+                        <p>Building clean, responsive, and user-centric websites using semantic HTML, modern CSS
+                            layouts, and best development practices.</p>
+                    </article>
+
+                    <article class="highlight-card">
+                        <h3>🚀 Career Growth</h3>
+                        <p>Aiming to become a proficient software engineer by working on real-world projects,
+                            collaborating with teams, and exploring new technologies.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ==================== ফুটার (Footer) ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Hanjala Sumon. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

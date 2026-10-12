@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- পেজের মেটা ট্যাগ ও এনকোডিং -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | [Your Name] - CSE Student Portfolio</title>
+    <!-- মূল এক্সটার্নাল CSS ফাইল লিংক -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== হেডার ও নেভিগেশন বার ==================== -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- ব্র্যান্ড লোগো / নাম -->
+                <a href="index.html" class="brand-logo">
+                    Hanjala Sumon<span>.dev</span>
+                </a>
+
+                <!-- পেজ লিঙ্কসমূহ (বর্তমান পেজে 'active' ক্লাস রয়েছে) -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== মূল কনটেন্ট (Main Content) ==================== -->
+    <main>
+        <div class="container">
+            <!-- পেজ শিরোনাম -->
+            <section class="page-header">
+                <h1 class="page-title">Featured Projects</h1>
+                <p class="page-subtitle">A collection of academic assignments, software projects, and personal
+                    programming experiments.</p>
+            </section>
+
+            <!-- প্রজেক্ট গ্রিড সেকশন -->
+            <div class="projects-grid">
+
+                <!-- প্রজেক্ট কার্ড ১ -->
+                <article class="project-card">
+                    <div>
+                        <span class="project-badge">Academic Project</span>
+                        <h2 class="project-title">Student Record Management</h2>
+                        <p class="project-description">
+                            A robust console-based application built using C/C++ file handling systems. Enables
+                            administrators to record, search, modify, and delete student academic profiles with ease.
+                        </p>
+                        <ul class="project-features">
+                            <li>Persistent file-based data storage</li>
+                            <li>Quick search by Roll ID or Department</li>
+                            <li>Input validation and intuitive menu navigation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="project-tech">
+                            <span class="tech-tag">C / C++</span>
+                            <span class="tech-tag">File Handling</span>
+                            <span class="tech-tag">Data Structures</span>
+                        </div>
+                        <div class="project-actions">
+                            <!-- গিটহাব রিপোজিটরি লিংক (প্লেসহোল্ডার) -->
+                            <a href="https://github.com/[your-username]/student-management" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- প্রজেক্ট কার্ড ২ -->
+                <article class="project-card">
+                    <div>
+                        <span class="project-badge">Web Development</span>
+                        <h2 class="project-title">Personal Portfolio Website</h2>
+                        <p class="project-description">
+                            A fully responsive, multi-page personal developer portfolio built entirely with semantic
+                            HTML5 and vanilla CSS3 without any external frameworks.
+                        </p>
+                        <ul class="project-features">
+                            <li>Fully responsive for mobile, tablet, and desktop</li>
+                            <li>Semantic HTML markup and clean CSS architecture</li>
+                            <li>Modern CSS Grid & Flexbox layout models</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3 (Grid/Flexbox)</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Sumon6659/portfolio-website" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub Code</a>
+                            <a href="index.html" class="btn btn-primary btn-sm">Live Preview</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- প্রজেক্ট কার্ড ৩ -->
+                <article class="project-card">
+                    <div>
+                        <span class="project-badge">Coursework</span>
+                        <h2 class="project-title">Library Management System</h2>
+                        <p class="project-description">
+                            An object-oriented software system designed to automate library operations, manage book
+                            inventories, track issued books, and compute overdue fines.
+                        </p>
+                        <ul class="project-features">
+                            <li>Book checkout, return, and availability tracking</li>
+                            <li>Automated overdue penalty calculation</li>
+                            <li>Applied OOP principles: inheritance & polymorphism</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java / OOP</span>
+                            <span class="tech-tag">Console Application</span>
+                            <span class="tech-tag">Algorithms</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/[your-username]/library-management" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-secondary btn-sm">GitHub Code</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== ফুটার (Footer) ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 HAnjala Sumon. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

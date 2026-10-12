@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- পেজের মেটা ট্যাগ ও এনকোডিং -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | [Your Name] - CSE Student Portfolio</title>
+    <!-- মূল এক্সটার্নাল CSS ফাইল লিংক -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== হেডার ও নেভিগেশন বার ==================== -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- ব্র্যান্ড লোগো / নাম -->
+                <a href="index.html" class="brand-logo">
+                    [Your Name]<span>.dev</span>
+                </a>
+
+                <!-- পেজ লিঙ্কসমূহ (বর্তমান পেজে 'active' ক্লাস রয়েছে) -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== মূল কনটেন্ট (Main Content) ==================== -->
+    <main>
+        <div class="container">
+            <!-- পেজ শিরোনাম -->
+            <section class="page-header">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">Feel free to reach out for project collaborations, software inquiries, or
+                    simply to say hello!</p>
+            </section>
+
+            <!-- কন্টাক্ট গ্রিড সেকশন -->
+            <div class="contact-grid">
+
+                <!-- কার্ড ১: সরাসরি যোগাযোগের তথ্য ও সোশ্যাল মিডিয়া -->
+                <article class="contact-info-card">
+                    <h3>📬 Contact Information</h3>
+
+                    <div class="contact-methods">
+                        <!-- ইমেইল এড্রেস -->
+                        <div class="contact-item">
+                            <span class="contact-label">Email:</span>
+                            <a href="mailto:sumon66595@gmail.com" class="contact-value">
+                                sumon66595@gmail.com
+                            </a>
+                        </div>
+
+                        <!-- মোবাইল বা ফোন নম্বর -->
+                        <div class="contact-item">
+                            <span class="contact-label">Phone / WhatsApp:</span>
+                            <a href="tel:+880176325842" class="contact-value">
+                                [+880 1753556646]
+                            </a>
+                        </div>
+
+                        <!-- বর্তমান অবস্থান / শহর -->
+                        <div class="contact-item">
+                            <span class="contact-label">Location:</span>
+                            <span class="contact-value">Bogura,Bangladesh</span>
+                        </div>
+                    </div>
+
+                    <!-- সোশ্যাল ও প্রোগ্রামিং প্রোফাইল লিঙ্কসমূহ -->
+                    <h4 style="font-size: 1rem; margin-bottom: 0.85rem; color: var(--text-dark);">🔗 Social & Coding
+                        Profiles</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/[your-username]" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">GitHub</a>
+                        <a href="https://linkedin.com/in/[your-username]" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">LinkedIn</a>
+                        <a href="https://codeforces.com/profile/[your-username]" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-secondary btn-sm">Codeforces</a>
+                        <a href="https://leetcode.com/[your-username]" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-secondary btn-sm">LeetCode</a>
+                    </div>
+                </article>
+
+                <!-- কার্ড ২: মেসেজ পাঠানোর ফর্ম (Pure HTML Form) -->
+                <article class="contact-form-card">
+                    <h3>✉️ Send a Message</h3>
+
+                    <!-- কোনো স্ক্রিপ্ট ছাড়া সাধারণ এইচটিএমএল ফর্ম -->
+                    <form action="#" method="post">
+                        <!-- নাম ইনপুট -->
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name:</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe"
+                                required>
+                        </div>
+
+                        <!-- ইমেইল ইনপুট -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address:</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="name@example.com" required>
+                        </div>
+
+                        <!-- বিষয় ইনপুট -->
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject:</label>
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                placeholder="e.g. Project Collaboration" required>
+                        </div>
+
+                        <!-- মেসেজ টেক্সটএরিয়া -->
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Type your message here..." required></textarea>
+                        </div>
+
+                        <!-- সাবমিট বাটন -->
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== ফুটার (Footer) ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

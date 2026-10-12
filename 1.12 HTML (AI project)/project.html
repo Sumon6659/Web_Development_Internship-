@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- পেজের এনকোডিং এবং স্ক্রিন রেসপনসিভনেস নির্ধারণ করা -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern and fully semantic HTML5 landing page">
+    <title>DevCraft - Master Web Development</title>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         ১. হেডার সেকশন (Header Section):
+         ওয়েবসাইটের পরিচিতি, ব্র্যান্ডের লোগো এবং প্রধান নেভিগেশন বার ধারণ করে।
+         ========================================================= -->
+    <header>
+        <!-- ব্র্যান্ড লোগো ও স্লোগান -->
+        <div>
+            <h1>DevCraft Academy</h1>
+            <p><strong>Building the Next Generation of Web Developers</strong></p>
+        </div>
+
+        <!-- প্রধান নেভিগেশন মেনু (Navigation Bar) -->
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- =========================================================
+         ২. মেইন এরিয়া (Main Content Area):
+         ওয়েব পেজের যাবতীয় মূল কনটেন্ট এই <main> ট্যাগের মধ্যে থাকে।
+         ========================================================= -->
+    <main>
+
+        <!-- -----------------------------------------------------
+             সেকশন ১: হিরো ব্যানার সেকশন (Hero Banner Section)
+             ওয়েবসাইটের প্রধান আকর্ষণ, হেডলাইন ও কল-টু-অ্যাকশন বাটন।
+             ----------------------------------------------------- -->
+        <section id="home">
+            <h2>Learn Modern Web Development from Scratch</h2>
+            <p>
+                Master HTML5, CSS3, Modern JavaScript, and Full-Stack development through hands-on practical projects.
+                <mark>No prior coding experience required!</mark>
+            </p>
+
+            <!-- ছবি এবং ছবির ক্যাপশন (Figure & Figcaption) -->
+            <figure>
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&auto=format&fit=crop&q=60"
+                    alt="Coding workspace with laptop" width="650">
+                <figcaption>Figure 1.1: Interactive Live Coding & Practical Workspace</figcaption>
+            </figure>
+
+            <p>
+                <a href="#courses"><button type="button">🚀 Explore Courses</button></a>
+                <a href="#about"><button type="button">📖 Learn More</button></a>
+            </p>
+
+            <!-- প্ল্যাটফর্মের হাইলাইটস ও পরিসংখ্যান -->
+            <ul>
+                <li>👨‍🎓 5,000+ Active Students</li>
+                <li>⭐ 4.9/5 Average Rating</li>
+                <li>💼 100+ Career Placement Partners</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ২: আমাদের সম্পর্কে (About Us Section)
+             কোম্পানি বা প্ল্যাটফর্মের লক্ষ্য ও ভিশন কোটেশন।
+             ----------------------------------------------------- -->
+        <section id="about">
+            <h2>About DevCraft Academy</h2>
+            <p>
+                DevCraft Academy is a premier learning platform dedicated to teaching practical, industry-standard web
+                development.
+                Our mission is to help aspiring developers build real-world software and prepare for global tech
+                careers.
+            </p>
+
+            <!-- গুরুত্বপূর্ণ উক্তি (Blockquote & Cite) -->
+            <blockquote cite="https://example.com">
+                <p><em>"Consistent daily practice and quality mentorship can transform any beginner into a world-class
+                        software engineer."</em></p>
+                <footer>— <cite>Sumon Hossain, Lead Instructor & Founder</cite></footer>
+            </blockquote>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ৩: প্রধান সুবিধাসমূহ (Features Section)
+             প্রতিটি সুবিধার জন্য আলাদা <article> ট্যাগ ব্যবহার করা হয়েছে।
+             ----------------------------------------------------- -->
+        <section id="features">
+            <h2>Why Choose DevCraft?</h2>
+
+            <!-- সুবিধা ১ -->
+            <article>
+                <h3>1. Real-World Project-Based Learning</h3>
+                <p>Build 10+ production-ready websites and web apps instead of just memorizing syntax.</p>
+            </article>
+
+            <!-- সুবিধা ২ -->
+            <article>
+                <h3>2. 1-on-1 Code Reviews & Mentorship</h3>
+                <p>Get line-by-line feedback and personalized problem-solving support directly from experienced
+                    engineers.</p>
+            </article>
+
+            <!-- সুবিধা ৩ -->
+            <article>
+                <h3>3. Lifetime Access & Updates</h3>
+                <p>Access all course videos, assignment guides, and continuous technology updates forever.</p>
+            </article>
+
+            <!-- সুবিধা ৪ -->
+            <article>
+                <h3>4. Career Guidance & Mock Interviews</h3>
+                <p>Learn GitHub portfolio building, resume crafting, and practice live technical interview challenges.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ৪: জনপ্রিয় কোর্সসমূহ (Courses Section)
+             প্রতিটি কোর্সের কার্ডের জন্য <article>, <header> এবং <footer> ট্যাগ।
+             ----------------------------------------------------- -->
+        <section id="courses">
+            <h2>Popular Courses</h2>
+
+            <!-- কোর্স ১ -->
+            <article>
+                <header>
+                    <h3>HTML5 & Semantic Web Design</h3>
+                    <p><small>Level: Beginner | Duration: 4 Weeks</small></p>
+                </header>
+                <p>Learn clean document structuring, semantic tags, SEO best practices, and accessible web forms.</p>
+                <footer>
+                    <p><strong>Price:</strong> $29 | <a href="#contact">Enroll Now &rarr;</a></p>
+                </footer>
+            </article>
+
+            <br>
+
+            <!-- কোর্স ২ -->
+            <article>
+                <header>
+                    <h3>Modern CSS, Flexbox & Grid Masterclass</h3>
+                    <p><small>Level: Intermediate | Duration: 6 Weeks</small></p>
+                </header>
+                <p>Master responsive design layouts, modern typography, color palettes, and micro-animations.</p>
+                <footer>
+                    <p><strong>Price:</strong> $49 | <a href="#contact">Enroll Now &rarr;</a></p>
+                </footer>
+            </article>
+
+            <br>
+
+            <!-- কোর্স ৩ -->
+            <article>
+                <header>
+                    <h3>Full-Stack JavaScript Bootcamp</h3>
+                    <p><small>Level: Advanced | Duration: 12 Weeks</small></p>
+                </header>
+                <p>Deep dive into JavaScript ES6+, DOM manipulation, REST APIs, and backend server integration.</p>
+                <footer>
+                    <p><strong>Price:</strong> $89 | <a href="#contact">Enroll Now &rarr;</a></p>
+                </footer>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ৫: মূল্য তালিকা ও তুলনা (Pricing Table Section)
+             সিম্যান্টিক টেবিল (Table, Caption, Thead, Tbody, Tfoot) দিয়ে প্ল্যান তুলনা।
+             ----------------------------------------------------- -->
+        <section id="pricing">
+            <h2>Pricing Plans & Comparison</h2>
+            <p>Choose the learning plan that fits your career goals:</p>
+
+            <table border="1" cellpadding="10" cellspacing="0">
+                <caption>Course Subscription Plans</caption>
+                <thead>
+                    <tr>
+                        <th>Plan Name</th>
+                        <th>Course Access</th>
+                        <th>Mentorship Support</th>
+                        <th>Verified Certificate</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Basic Plan</strong></td>
+                        <td>1 Single Course</td>
+                        <td>Community Forum</td>
+                        <td>Yes</td>
+                        <td>$29</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Standard Bundle</strong></td>
+                        <td>3 Courses Access</td>
+                        <td>Live Weekly Q&amp;A</td>
+                        <td>Yes</td>
+                        <td>$69</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pro Mentorship</strong></td>
+                        <td>All Courses + Source Code</td>
+                        <td>1-on-1 Personal Mentor</td>
+                        <td>Yes (Verified)</td>
+                        <td>$119</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5"><em>* All plans include a 7-day 100% money-back guarantee.</em></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ৬: শিক্ষার্থীদের রিভিউ (Testimonials Section)
+             মন্তব্য, উদ্ধৃতি এবং <time> ও <address> ট্যাগ।
+             ----------------------------------------------------- -->
+        <section id="testimonials">
+            <h2>What Our Students Say</h2>
+
+            <!-- রিভিউ ১ -->
+            <article>
+                <blockquote>
+                    <p>"DevCraft made learning HTML and modern web layout so intuitive. I built my first personal
+                        portfolio in just 2 weeks!"</p>
+                </blockquote>
+                <address>
+                    <strong>— Alex Morgan</strong>, Junior Frontend Developer<br>
+                    <time datetime="2026-08-15">August 15, 2026</time>
+                </address>
+            </article>
+
+            <br>
+
+            <!-- রিভিউ ২ -->
+            <article>
+                <blockquote>
+                    <p>"The hands-on project reviews and rapid mentor support gave me the confidence to land my first
+                        freelance client."</p>
+                </blockquote>
+                <address>
+                    <strong>— Sarah Jenkins</strong>, Freelance Web Designer<br>
+                    <time datetime="2026-09-02">September 2, 2026</time>
+                </address>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ৭: সাধারণ প্রশ্নোত্তর (FAQ Section with Details & Summary)
+             ক্লিক করলে উত্তর এক্সপ্যান্ড বা ওপেন হয়।
+             ----------------------------------------------------- -->
+        <section id="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <!-- প্রশ্ন ১ -->
+            <details>
+                <summary><strong>Do I need prior coding experience before taking these courses?</strong></summary>
+                <p>No, all foundational courses are designed from the absolute ground up for complete beginners.</p>
+            </details>
+            <br>
+
+            <!-- প্রশ্ন ২ -->
+            <details>
+                <summary><strong>Are the lectures live or pre-recorded?</strong></summary>
+                <p>You will get high-quality pre-recorded lessons along with weekly live coding and doubt-clearing
+                    sessions.</p>
+            </details>
+            <br>
+
+            <!-- প্রশ্ন ৩ -->
+            <details>
+                <summary><strong>Will I receive a course completion certificate?</strong></summary>
+                <p>Yes, upon completing all assignments and the capstone project, you will receive a verifiable
+                    certificate.</p>
+            </details>
+        </section>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সাইডবার / অতিরিক্ত তথ্য (Aside Section):
+             মূল কনটেন্টের বাইরের নোটিশ, ডিসকাউন্ট অফার বা নিউজলেটার ফর্ম।
+             ----------------------------------------------------- -->
+        <aside>
+            <section>
+                <h3>📢 Limited Time Offer!</h3>
+                <p>
+                    Enroll in any course this week and get an instant <strong>50% discount</strong> on all pro tracks!
+                </p>
+                <p><small>Use Coupon Code: <code>DEVCRAFT2026</code></small></p>
+            </section>
+
+            <section>
+                <h3>📰 Subscribe to Developer Newsletter</h3>
+                <form action="#" method="post">
+                    <label for="newsletter-email">Your Email Address:</label>
+                    <input type="email" id="newsletter-email" name="newsletter_email" placeholder="name@example.com"
+                        required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </section>
+        </aside>
+
+        <hr>
+
+        <!-- -----------------------------------------------------
+             সেকশন ৮: যোগাযোগ ও রেজিস্ট্রেশন ফর্ম (Contact & Registration Form)
+             ইউজারের থেকে ডেটা নেওয়ার ফিল্ডসেট, ইনপুট ও সিলেকশন মেনু।
+             ----------------------------------------------------- -->
+        <section id="contact">
+            <h2>Contact & Registration</h2>
+            <p>Have any questions or ready to register? Fill out the form below:</p>
+
+            <form action="#" method="post">
+                <!-- ব্যক্তিগত তথ্যের অংশ -->
+                <fieldset>
+                    <legend><strong>Personal Information</strong></legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="e.g. John Doe" required>
+                    </p>
+
+                    <p>
+                        <label for="useremail">Email Address:</label><br>
+                        <input type="email" id="useremail" name="useremail" placeholder="john@example.com" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- কোর্স পছন্দ ও বার্তার অংশ -->
+                <fieldset>
+                    <legend><strong>Course Preference & Message</strong></legend>
+
+                    <p>
+                        <label for="course_select">Select Course of Interest:</label><br>
+                        <select id="course_select" name="course_select" required>
+                            <option value="">-- Choose a Course --</option>
+                            <option value="html">HTML5 &amp; Semantic Web Design</option>
+                            <option value="css">Modern CSS &amp; Responsive Layouts</option>
+                            <option value="js">Full-Stack JavaScript Bootcamp</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Your Message or Questions:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"
+                            placeholder="Type your message here..."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms and Conditions.</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <p>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- =========================================================
+         ৩. ফুটার সেকশন (Footer Section):
+         অফিসের ঠিকানা, ফুটার নেভিগেশন লিংক এবং কপিরাইট তথ্য।
+         ========================================================= -->
+    <footer>
+        <section>
+            <h3>DevCraft Academy</h3>
+            <p>Empowering learners worldwide through practical and accessible coding education.</p>
+
+            <address>
+                <strong>Headquarters:</strong> 124 Innovation Avenue, Silicon Valley, CA 94025<br>
+                <strong>Phone:</strong> +1 (800) 555-0199<br>
+                <strong>Email:</strong> <a href="mailto:support@devcraft.com">support@devcraft.com</a>
+            </address>
+        </section>
+
+        <br>
+
+        <!-- ফুটার নেভিগেশন লিংক -->
+        <nav aria-label="Footer Navigation">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Back to Top</a></li>
+                <li><a href="#about">About Our Mission</a></li>
+                <li><a href="#pricing">Pricing Plans</a></li>
+                <li><a href="#faq">Help Center &amp; FAQ</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <p><small>&copy; 2026 DevCraft Academy. All rights reserved.</small></p>
+    </footer>
+
+</body>
+
+</html>

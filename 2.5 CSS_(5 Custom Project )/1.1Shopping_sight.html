@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendyMart - Online Shopping</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="1.2style.css">
+</head>
+
+<body>
+
+  <!-- 1. NAVBAR -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Trendy<span>Mart</span></a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-btns">
+        <a href="#products" class="cart-btn">🛒 Cart <span class="cart-count">3</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <span class="tag">🔥 Summer Collection 2026</span>
+          <h1>Upgrade Your Style &amp; Daily Life</h1>
+          <p>Discover top trending fashion, smart gadgets, sneakers, and lifestyle accessories at unbeatable prices.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Shop Now</a>
+            <a href="#offers" class="btn btn-secondary">View Deals</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://cdn.imgpile.com/f/SAqyCGj.webp" alt="Shopping banner">
+          <div class="discount-badge">70% OFF</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURES BAR -->
+    <section class="features">
+      <div class="container features-grid">
+        <div class="feature-box">
+          <span class="f-icon">🚚</span>
+          <div>
+            <h3>Free Delivery</h3>
+            <p>On orders above $50</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <span class="f-icon">🔒</span>
+          <div>
+            <h3>Secure Payment</h3>
+            <p>100% safe checkout</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <span class="f-icon">🔄</span>
+          <div>
+            <h3>30-Day Return</h3>
+            <p>Easy money back</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <span class="f-icon">🎧</span>
+          <div>
+            <h3>24/7 Support</h3>
+            <p>Live dedicated help</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CATEGORIES SECTION -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <div class="section-title">
+          <h2>Shop by Category</h2>
+          <p>Explore our most popular collections</p>
+        </div>
+        <div class="category-grid">
+          <div class="cat-card">
+            <img src="https://cdn.imgpile.com/f/MXgKPb7.jfif" alt="Fashion">
+            <h3>Fashion &amp; Clothes</h3>
+            <a href="#products">Explore &rarr;</a>
+          </div>
+          <div class="cat-card">
+            <img src="https://cdn.imgpile.com/f/N4wBo7R.jfif" alt="Smartwatches">
+            <h3>Smart Gadgets</h3>
+            <a href="#products">Explore &rarr;</a>
+          </div>
+          <div class="cat-card">
+            <img src="https://cdn.imgpile.com/f/vHYObKJ.webp" alt="Sneakers">
+            <h3>Sneakers &amp; Shoes</h3>
+            <a href="#products">Explore &rarr;</a>
+          </div>
+          <div class="cat-card">
+            <img src="https://cdn.imgpile.com/f/wkJ7UUq.webp" alt="Headphones">
+            <h3>Audio &amp; Music</h3>
+            <a href="#products">Explore &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FEATURED PRODUCTS SECTION -->
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Products</h2>
+          <p>Top trending picks loved by our customers</p>
+        </div>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <span class="badge">-25%</span>
+            <img src="https://cdn.imgpile.com/f/Tu7kOcb.webp" alt="Streetwear Outfit">
+            <div class="prod-details">
+              <span class="category">Fashion</span>
+              <h3>Urban Streetwear Jacket Set</h3>
+              <div class="rating">★★★★★ <span>(120)</span></div>
+              <div class="price-row">
+                <span class="price">$89.99</span>
+                <span class="old-price">$120.00</span>
+              </div>
+              <button class="btn btn-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <span class="badge hot">HOT</span>
+            <img src="https://cdn.imgpile.com/f/jd55RlQ.webp" alt="Smartwatch">
+            <div class="prod-details">
+              <span class="category">Gadgets</span>
+              <h3>Pro Smart Watch Ultra Series</h3>
+              <div class="rating">★★★★★ <span>(240)</span></div>
+              <div class="price-row">
+                <span class="price">$149.99</span>
+                <span class="old-price">$199.99</span>
+              </div>
+              <button class="btn btn-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <span class="badge">-30%</span>
+            <img src="https://cdn.imgpile.com/f/26AuWq8.webp" alt="Sneakers">
+            <div class="prod-details">
+              <span class="category">Footwear</span>
+              <h3>Air Flow Cushion Sneakers</h3>
+              <div class="rating">★★★★★ <span>(310)</span></div>
+              <div class="price-row">
+                <span class="price">$119.00</span>
+                <span class="old-price">$170.00</span>
+              </div>
+              <button class="btn btn-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <span class="badge">-20%</span>
+            <img src="https://cdn.imgpile.com/f/SAqyCGj.webp" alt="Headphones">
+            <div class="prod-details">
+              <span class="category">Audio</span>
+              <h3>ANC Wireless Studio Headphones</h3>
+              <div class="rating">★★★★★ <span>(185)</span></div>
+              <div class="price-row">
+                <span class="price">$179.99</span>
+                <span class="old-price">$225.00</span>
+              </div>
+              <button class="btn btn-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SPECIAL OFFER BANNER -->
+    <section class="offer" id="offers">
+      <div class="container offer-container">
+        <div class="offer-image">
+          <img src="https://cdn.imgpile.com/f/mvd6iow.webp" alt="Special Offer">
+        </div>
+        <div class="offer-text">
+          <span class="tag">Special Deal</span>
+          <h2>Get 50% OFF On Your First Order</h2>
+          <p>Use our secret promo code at checkout to claim instant 50% discount on all clothing and gadgets.</p>
+          <div class="coupon">Code: <strong>TRENDY50</strong></div>
+          <a href="#products" class="btn btn-primary">Claim Discount</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container footer-container">
+      <div class="footer-box">
+        <h3 class="logo">Trendy<span>Mart</span></h3>
+        <p>Your one-stop destination for modern fashion, accessories, and tech products.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#offers">Special Offers</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Contact Us</h4>
+        <p>Email: support@trendymart.com</p>
+        <p>Phone: +1 (800) 987-SHOP</p>
+        <p>Address: 5th Avenue, New York, NY</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 TrendyMart. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
