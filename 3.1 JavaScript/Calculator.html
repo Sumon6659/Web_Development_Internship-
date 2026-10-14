@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCalc - Professional Animated Calculator</title>
+    <meta name="description"
+        content="A professional, modern Quick Calculator with smooth animations and simple JavaScript logic.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Ambient Animated Background Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <main class="calculator-wrapper">
+        <div class="calculator-card" id="card">
+            <!-- Header -->
+            <div class="card-header">
+                <div class="brand">
+                    <span class="brand-dot"></span>
+                    <span class="brand-title">QUICK CALC</span>
+                </div>
+                <span class="badge">PRO JS</span>
+            </div>
+
+            <!-- Result Screen -->
+            <div class="result-box" id="resultBox">
+                <span class="result-label">RESULT</span>
+                <div class="result-display" id="out">= 0</div>
+            </div>
+
+            <!-- Form Inputs Area -->
+            <div class="input-form">
+                <!-- Input A -->
+                <div class="input-group">
+                    <label for="a" class="input-label">First Number (a)</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">A</span>
+                        <input type="number" id="a" placeholder="Enter first number" autocomplete="off" step="any">
+                    </div>
+                </div>
+
+                <!-- Operator Selection -->
+                <div class="input-group">
+                    <label for="op" class="input-label">Select Operator</label>
+                    <!-- Hidden standard select element required by logic -->
+                    <select id="op" class="styled-select">
+                        <option value="+" selected>+ (Addition / যোগ)</option>
+                        <option value="-">- (Subtraction / বিয়োগ)</option>
+                        <option value="*">* (Multiplication / গুণ)</option>
+                        <option value="/">/ (Division / ভাগ)</option>
+                    </select>
+
+                    <!-- Interactive Quick Operator Buttons -->
+                    <div class="operator-pills">
+                        <button type="button" class="op-btn active" data-op="+" title="Add (+)">+</button>
+                        <button type="button" class="op-btn" data-op="-" title="Subtract (−)">−</button>
+                        <button type="button" class="op-btn" data-op="*" title="Multiply (×)">×</button>
+                        <button type="button" class="op-btn" data-op="/" title="Divide (÷)">÷</button>
+                    </div>
+                </div>
+
+                <!-- Input B -->
+                <div class="input-group">
+                    <label for="b" class="input-label">Second Number (b)</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">B</span>
+                        <input type="number" id="b" placeholder="Enter second number" autocomplete="off" step="any">
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-row">
+                    <button type="button" class="btn-clear" id="resetBtn" title="Reset fields">Reset</button>
+                    <button type="button" class="btn-calculate" id="go">
+                        <span>Calculate</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            class="arrow-icon">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Info Footer -->
+        <div class="card-footer">
+            <span> <code>add</code>, <code>sub</code>, <code>mul</code>, <code>div</code> &
+                <code>calculate()</code></span>
+        </div>
+    </main>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
