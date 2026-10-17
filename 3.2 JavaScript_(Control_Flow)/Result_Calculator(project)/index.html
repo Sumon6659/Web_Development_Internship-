@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator Hanjala Coaching</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="hero">
+    <nav><span class="logo">Hanjala Coaching</span><a href="#calc">Calculator</a></nav>
+    <h1>তোমার Grade  এক click এ</h1>
+    <p>SSC / HSC marks বসিয়ে সাথে সাথে জানো কোন grade পাবে।</p>
+</header>
+
+<section id="calc" class="card">
+    <h2>Marks লিখো</h2>
+    <input id="mark" type="number" min="0" max="100" placeholder="0 - 100" />
+    <button id="btn">Grade দেখাও</button>
+    <div id="out" class="result"></div>
+</section>
+
+<section class="tips">
+    <h2>Grade Chart</h2>
+    <ul>
+        <li>80+ → A+</li>
+        <li>70-79 → A</li>
+        <li>60-69 → B</li>
+        <li>50-59 → C</li>
+        <li>33-49 → D</li>
+        <li>0-32 → F</li>
+    </ul>
+</section>
+
+<footer>Hanjala Coaching 2026</footer>
+<script src="app.js"></script>
+</body>
+</html>
