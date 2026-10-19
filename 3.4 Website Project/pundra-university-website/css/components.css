@@ -1,0 +1,719 @@
+/**
+ * পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজি (PUB)
+ * কম্পোনেন্ট সিএসএস: স্লাইডার, কার্ড, ট্যাব, ক্যালকুলেটর, অ্যাকর্ডিয়ন, মডাল
+ */
+
+/* ==========================================
+   ১. হিরো স্লাইডার কম্পোনেন্ট (Hero Carousel)
+   ========================================== */
+.hero-slider-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--navy-dark);
+  min-height: 520px;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 560px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: scale(1.03);
+  background-size: cover;
+  background-position: center center;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 30, 67, 0.92) 0%, rgba(0, 30, 67, 0.75) 55%, rgba(0, 30, 67, 0.35) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.slide-content {
+  max-width: 680px;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.slide-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.slide-title {
+  font-size: 2.8rem;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide-description {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.slide-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* স্লাইডার নেভিগেশন বোতাম */
+.slider-control-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 30, 67, 0.65);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.slider-control-btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.slider-prev { left: 25px; }
+.slider-next { right: 25px; }
+
+/* স্লাইডার ডট ইন্ডিকেটরস */
+.slider-indicators {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-dot.active {
+  background-color: var(--primary-color);
+  width: 32px;
+  border-radius: 10px;
+}
+
+/* ==========================================
+   ২. প্রোগ্রাম কার্ড ও ট্যাব (Program Cards & Tabs)
+   ========================================== */
+.programs-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background-color: #ffffff;
+  color: var(--navy-color);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(250, 57, 74, 0.25);
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 28px;
+}
+
+.program-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(250, 57, 74, 0.3);
+}
+
+.program-card-thumb {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--navy-dark);
+}
+
+.program-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.program-card:hover .program-card-thumb img {
+  transform: scale(1.08);
+}
+
+.program-level-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--navy-color);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.program-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.program-faculty-tag {
+  font-size: 13px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.program-title {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.program-overview-snippet {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.program-meta-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 18px;
+  font-size: 13.5px;
+}
+
+.program-meta-item strong {
+  display: block;
+  color: var(--heading-color);
+  font-size: 15px;
+}
+
+.program-meta-item span {
+  color: var(--text-muted);
+}
+
+.program-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.program-fee-total {
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.program-fee-total strong {
+  font-size: 16px;
+  color: var(--primary-color);
+  display: block;
+}
+
+/* ==========================================
+   ৩. নোটিশ বক্স কম্পোনেন্ট (Notice Board)
+   ========================================== */
+.notice-board-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.notice-box {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.notice-box:hover {
+  transform: translateX(5px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.notice-date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.notice-date-day {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.notice-date-month {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.notice-info {
+  flex-grow: 1;
+}
+
+.notice-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--navy-color);
+  background-color: var(--bg-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 4px;
+}
+
+.notice-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--heading-color);
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.notice-title a:hover {
+  color: var(--primary-color);
+}
+
+.notice-meta {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   ৪. ইভেন্ট ও সেমিনার কার্ড (Event Cards)
+   ========================================== */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.event-card-img {
+  position: relative;
+  height: 200px;
+  background-color: var(--navy-color);
+}
+
+.event-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-date-chip {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--secondary-color);
+  color: var(--navy-color);
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-card-body {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-venue-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.event-card-title {
+  font-size: 1.15rem;
+  color: var(--heading-color);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.event-description {
+  font-size: 14px;
+  color: var(--body-color);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+/* ==========================================
+   ৫. ক্যাম্পাস পরিসংখ্যান কাউন্টার (Funfacts)
+   ========================================== */
+.counter-section {
+  background: linear-gradient(135deg, var(--navy-color) 0%, var(--navy-dark) 100%);
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  text-align: center;
+}
+
+.counter-item {
+  padding: 20px;
+}
+
+.counter-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px auto;
+  color: var(--secondary-color);
+}
+
+.counter-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.counter-label {
+  font-size: 15px;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* ==========================================
+   ৬. টিউশন ফি ক্যালকুলেটর (Fee Calculator)
+   ========================================== */
+.fee-calculator-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.calculator-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.form-select,
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  color: var(--body-color);
+  background-color: #ffffff;
+  transition: all var(--transition-fast);
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(250, 57, 74, 0.15);
+}
+
+.calculator-result-box {
+  background-color: var(--bg-light);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  margin-top: 25px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.result-row:last-child {
+  border-bottom: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-top: 14px;
+}
+
+/* ==========================================
+   ৭. অ্যাকর্ডিয়ন কম্পোনেন্ট (FAQ / Curriculum)
+   ========================================== */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  color: var(--heading-color);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  background-color: var(--bg-light);
+}
+
+.accordion-icon {
+  font-size: 18px;
+  transition: transform var(--transition-normal);
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+  padding: 0 20px;
+  background-color: #ffffff;
+  color: var(--body-color);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-body {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+/* ==========================================
+   ৮. টেবিল কম্পোনেন্ট (Tables)
+   ========================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.custom-table th {
+  background-color: var(--navy-color);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 14px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.custom-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--body-color);
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+.custom-table tbody tr:hover {
+  background-color: rgba(250, 57, 74, 0.05);
+}
+
+/* ==========================================
+   ৯. পার্টনার ও অ্যাফিলিয়েশন গ্রিড (Partners)
+   ========================================== */
+.partners-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.partner-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.partner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.partner-name {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--navy-color);
+}

@@ -1,0 +1,380 @@
+/**
+ * পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজি (PUB)
+ * পেজ-ভিত্তিক বিশেষ সিএসএস: অ্যাবাউট, অ্যাডমিশন, ডিপার্টমেন্ট, কন্টাক্ট ইত্যাদি
+ */
+
+/* ==========================================
+   ১. অ্যাবাউট ও ইতিহাস পেজ (About & History)
+   ========================================== */
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.about-img-box {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-img-box img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 16px 22px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-experience-badge strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-content-text p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--body-color);
+  margin-bottom: 18px;
+}
+
+.history-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 25px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--navy-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.timeline-year {
+  display: inline-block;
+  background-color: var(--navy-color);
+  color: #ffffff;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+
+/* ==========================================
+   ২. ভিশন ও মিশন কার্ড (Vision & Mission)
+   ========================================== */
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.vm-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.vm-card.mission::before {
+  background-color: var(--secondary-color);
+}
+
+.vm-card h3 {
+  font-size: 1.4rem;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+/* ==========================================
+   ৩. অনুষদ ও শিক্ষক প্রোফাইল (Faculty Profiles)
+   ========================================== */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 28px;
+}
+
+.faculty-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.faculty-img-wrapper {
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--bg-subtle);
+}
+
+.faculty-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.faculty-card:hover .faculty-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.faculty-card-info {
+  padding: 20px 15px;
+}
+
+.faculty-name {
+  font-size: 1.1rem;
+  color: var(--heading-color);
+  margin-bottom: 4px;
+}
+
+.faculty-designation {
+  font-size: 13px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.faculty-dept {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   ৪. ডিপার্টমেন্ট ও ফ্যাসিলিটিজ গ্রিড
+   ========================================== */
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
+}
+
+.department-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(250, 57, 74, 0.3);
+}
+
+.department-card-thumb {
+  height: 180px;
+  overflow: hidden;
+  background-color: var(--navy-dark);
+}
+
+.department-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.department-card-body {
+  padding: 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.department-card-title {
+  font-size: 1.25rem;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   ৫. কন্টাক্ট ও ডেমো অ্যাডমিশন ফর্ম (Forms)
+   ========================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+.contact-info-card {
+  background-color: var(--navy-color);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 35px;
+}
+
+.contact-info-card h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contact-form-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-alert {
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  display: none;
+  font-size: 14.5px;
+}
+
+.form-alert.success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.form-alert.error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* ==========================================
+   ৬. লাইটবক্স ফটো গ্যালারি (Gallery)
+   ========================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 30, 67, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* লাইটবক্স পপআপ */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 35px;
+  cursor: pointer;
+}

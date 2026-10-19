@@ -1,0 +1,193 @@
+/**
+ * পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজি (PUB)
+ * ফুটার সিএসএস: ৪টি কলাম বিশিষ্ট ফুটার, ভিজিটর কাউন্টার ও কপিরাইট বার
+ */
+
+.footer-area {
+  background-color: var(--navy-color);
+  color: #ffffff;
+  padding-top: 60px;
+  border-top: 4px solid var(--primary-color);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-widget h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.footer-widget h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.footer-about-text {
+  color: #cbd5e1;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.footer-readmore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.footer-readmore-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* সোশ্যাল মিডিয়া লিঙ্ক */
+.social-links-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all var(--transition-fast);
+}
+
+.social-icon-btn.fb:hover {
+  background-color: #1877f2;
+  transform: translateY(-3px);
+}
+
+.social-icon-btn.yt:hover {
+  background-color: #ff0000;
+  transform: translateY(-3px);
+}
+
+/* ফুটার লিঙ্ক তালিকা */
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.footer-links-list li a:hover {
+  color: var(--secondary-color);
+  padding-left: 6px;
+}
+
+/* কন্টাক্ট উইজেট */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.contact-item svg,
+.contact-item i {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--secondary-color);
+  margin-top: 3px;
+}
+
+.contact-item a {
+  color: #cbd5e1;
+}
+
+.contact-item a:hover {
+  color: var(--secondary-color);
+}
+
+/* ==========================================
+   ভিজিটর কাউন্টার সেকশন (Visitor Counter)
+   ========================================== */
+.visitor-counter-box {
+  text-align: center;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.visitor-counter-box h5 {
+  color: var(--secondary-color);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.visitor-count-text {
+  color: #e2e8f0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.visitor-count-highlight {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0 4px;
+}
+
+/* ==========================================
+   কপিরাইট এরিয়া (Copyright Area)
+   ========================================== */
+.copyright-area {
+  background-color: var(--navy-dark);
+  padding: 18px 0;
+  text-align: center;
+  font-size: 13.5px;
+  color: #94a3b8;
+}
+
+.copyright-area strong {
+  color: #ffffff;
+}

@@ -1,0 +1,52 @@
+/**
+ * পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজি (PUB)
+ * প্রিন্ট সিএসএস: প্রিন্ট করার সময় অপ্রয়োজনীয় এলিমেন্ট লুকানো এবং পরিচ্ছন্ন লেআউট
+ */
+
+@media print {
+  body {
+    font-size: 12pt;
+    color: #000000;
+    background: #ffffff;
+  }
+
+  .top-header-area,
+  .main-navbar,
+  .hero-slider-container,
+  .slider-control-btn,
+  .slider-indicators,
+  .mobile-toggle-btn,
+  .mobile-drawer,
+  .drawer-backdrop,
+  #back-to-top,
+  .footer-area,
+  .copyright-area,
+  .btn-outline,
+  .default-btn,
+  .tab-btn {
+    display: none !important;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .custom-table {
+    border: 1px solid #000000 !important;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    background: transparent !important;
+    padding: 6px 8px !important;
+  }
+
+  a[href]::after {
+    content: "" !important;
+  }
+}

@@ -1,0 +1,266 @@
+/**
+ * পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজি (PUB)
+ * রেসপনসিভ সিএসএস: মোবাইল ড্রয়ার, ট্যাবলেট ব্রেকপয়েন্ট ও টাচ অপ্টিমাইজেশন
+ */
+
+/* ==========================================
+   মোবাইল ড্রয়ার ও ব্যাকড্রপ (Mobile Offcanvas Drawer)
+   ========================================== */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.drawer-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  max-width: 85%;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: -5px 0 25px rgba(0, 30, 67, 0.2);
+  z-index: 1999;
+  display: flex;
+  flex-direction: column;
+  transition: right var(--transition-normal);
+  overflow-y: auto;
+}
+
+.mobile-drawer.active {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background-color: var(--navy-color);
+  color: #ffffff;
+}
+
+.drawer-header img {
+  height: 38px;
+  width: auto;
+}
+
+.drawer-close-btn {
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1;
+}
+
+.drawer-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-nav-item {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy-color);
+}
+
+.mobile-submenu-toggle {
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform var(--transition-fast);
+}
+
+.mobile-nav-item.open .mobile-submenu-toggle {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  display: none;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.mobile-nav-item.open > .mobile-submenu {
+  display: block;
+}
+
+.mobile-submenu-link {
+  display: block;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--body-color);
+}
+
+.mobile-submenu-link:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================
+   ট্যাবলেট ব্রেকপয়েন্ট (Max-Width: 991px)
+   ========================================== */
+@media (max-width: 991px) {
+  .nav-menu,
+  .online-admission-btn {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-intro-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .slide-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-slider {
+    height: 480px;
+  }
+}
+
+/* ==========================================
+   মোবাইল ডিভাইস (Max-Width: 767px)
+   ========================================== */
+@media (max-width: 767px) {
+  :root {
+    --section-padding-y: 45px;
+  }
+
+  .top-header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .top-contact-list {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .top-portal-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .counter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slide-title {
+    font-size: 1.8rem;
+  }
+
+  .slide-description {
+    font-size: 0.95rem;
+  }
+
+  .section-header .section-title {
+    font-size: 1.8rem;
+  }
+
+  .calculator-form-grid,
+  .form-grid-2,
+  .vision-mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .programs-grid,
+  .events-grid,
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .brand-subtitle {
+    font-size: 9.5px;
+  }
+
+  .hero-slider {
+    height: 440px;
+  }
+
+  .slider-control-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ==========================================
+   ছোট মোবাইল স্ক্রিন (Max-Width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+  .counter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-buttons {
+    flex-direction: column;
+  }
+
+  .slide-buttons .default-btn,
+  .slide-buttons .btn-secondary {
+    width: 100%;
+  }
+
+  .notice-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

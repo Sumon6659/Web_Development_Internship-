@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজির অফিসিয়াল টিউশন ফি তালিকা ও ফি ক্যালকুলেটর">
+  <title>Tuition Fees & Calculator | Pundra University of Science & Technology</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/logo/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/print.css" media="print">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">মূল বিষয়বস্তুতে যান</a>
+
+  <!-- টপবার -->
+  <div class="top-header-area">
+    <div class="container-fluid">
+      <div class="top-header-content">
+        <div class="top-contact-list">
+          <a href="tel:+8801713377033">+880 1713 377 033</a>
+          <a href="mailto:admission@pundrauniversity.edu.bd">admission@pundrauniversity.edu.bd</a>
+        </div>
+        <div class="top-portal-links">
+          <a href="./programs.html">Programs</a>
+          <a href="./admission.html">Admission</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- প্রধান নেভিগেশন বার -->
+  <header class="main-navbar">
+    <div class="container-fluid">
+      <div class="navbar-wrapper">
+        <a href="../index.html" class="navbar-brand">
+          <img src="../assets/images/logo/logo.png" alt="PUB Logo" width="48" height="48">
+          <div class="brand-text">
+            <span class="brand-title">Pundra University</span>
+            <span class="brand-subtitle">of Science & Technology</span>
+          </div>
+        </a>
+
+        <nav class="nav-menu">
+          <div class="nav-item"><a href="../index.html" class="nav-link">Home</a></div>
+          <div class="nav-item"><a href="./about.html" class="nav-link">About Us</a></div>
+          <div class="nav-item"><a href="./leadership.html" class="nav-link">Administrations</a></div>
+          <div class="nav-item"><a href="./admission.html" class="nav-link">Admission</a></div>
+          <div class="nav-item"><a href="./programs.html" class="nav-link">Programs</a></div>
+          <div class="nav-item"><a href="./departments.html" class="nav-link">Departments</a></div>
+          <div class="nav-item"><a href="./tuition-fees.html" class="nav-link active">Tuition Fees</a></div>
+          <div class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></div>
+        </nav>
+
+        <div class="navbar-actions">
+          <a href="./admission.html#apply-form" class="default-btn online-admission-btn">Online Admission</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- পেজ ব্যানার -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Tuition Fees & Calculator</h1>
+      <div class="breadcrumb-list">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="./admission.html">Admission</a>
+        <span class="separator">/</span>
+        <span class="current-page">Tuition Fees</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- মূল কন্টেন্ট -->
+  <main id="main-content" class="section-padding bg-light">
+    <div class="container">
+      
+      <!-- ১. ডাইনামিক টিউশন ফি ক্যালকুলেটর বক্স -->
+      <div id="calculator" style="margin-bottom: 60px;">
+        <div class="section-header">
+          <span class="section-subtitle">Online Tool</span>
+          <h2 class="section-title">Tuition Fee Calculator</h2>
+          <p>আপনার পছন্দের কোর্স এবং প্রযোজ্য ওয়েভার নির্বাচন করে সহজেই ফি বিশ্লেষণ করুন।</p>
+        </div>
+
+        <div class="fee-calculator-card">
+          <div class="calculator-form-grid">
+            <div class="form-group">
+              <label for="calc-program-select" class="form-label">শিক্ষা প্রোগ্রাম নির্বাচন করুন *</label>
+              <select id="calc-program-select" class="form-select">
+                <!-- জাভাস্ক্রিপ্ট থেকে অপশন আসবে -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="calc-waiver-select" class="form-label">স্কলারশিপ বা ওয়েভার কোটা</label>
+              <select id="calc-waiver-select" class="form-select">
+                <option value="0">সাধারণ আবেদন (০% ওয়েভার)</option>
+                <option value="10">১০% বিশেষ ওয়েভার</option>
+                <option value="20">২০% মেধাভিত্তিক ওয়েভার</option>
+                <option value="30">৩০% বিশেষ স্কলারশিপ</option>
+                <option value="50">৫০% জিপিএ ৫.০০ / ভাই-বোন কোটা</option>
+                <option value="100">১০০% পূর্ণ মেধা স্কলারশিপ</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="button" id="calculate-fee-btn" class="default-btn" style="padding: 12px 35px;">
+              ফি হিসাব করুন
+            </button>
+          </div>
+
+          <div id="calculator-result-container" class="calculator-result-box" style="display: none;"></div>
+        </div>
+      </div>
+
+      <!-- ২. অফিসিয়াল ফি তালিকা টেবিল -->
+      <div>
+        <div class="section-header">
+          <span class="section-subtitle">Official Fee Chart</span>
+          <h2 class="section-title">Complete Program Fee Structure</h2>
+          <p>পুন্ড্র বিশ্ববিদ্যালয়ের অফিসিয়াল সার্কুলার অনুযায়ী সকল ২২টি প্রোগ্রামের বিস্তারিত ফি চার্ট।</p>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 15px;">
+          <button type="button" onclick="window.print()" class="btn-outline btn-sm">
+            ফি তালিকা প্রিন্ট করুন
+          </button>
+        </div>
+
+        <!-- আন্ডারগ্র্যাজুয়েট টেবিল -->
+        <h3 style="color: var(--navy-color); margin-bottom: 15px;">Undergraduate Programs (স্নাতক কোর্স)</h3>
+        <div class="table-responsive" style="margin-bottom: 40px;">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Programs</th>
+                <th style="text-align: center;">Total Credit</th>
+                <th style="text-align: center;">Total Semester</th>
+                <th style="text-align: right;">Admission Fee</th>
+                <th style="text-align: right;">Registration Fee</th>
+                <th style="text-align: right;">Tuition Fee</th>
+                <th style="text-align: right;">Other Fee</th>
+                <th style="text-align: right;">Total Fee</th>
+                <th style="text-align: right;">Monthly Fee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BBA (Bachelor of Business Admin)</strong></td>
+                <td style="text-align: center;">140.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,33,000</td>
+                <td style="text-align: right;">1,59,000</td>
+                <td style="text-align: right;"><strong>3,15,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,250</td>
+              </tr>
+              <tr>
+                <td><strong>B.Sc. in Computer Science & Eng. (CSE)</strong></td>
+                <td style="text-align: center;">161.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,89,980</td>
+                <td style="text-align: right;">2,14,020</td>
+                <td style="text-align: right;"><strong>4,27,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">8,583</td>
+              </tr>
+              <tr>
+                <td><strong>B.Sc. in Electrical & Electronic Eng. (EEE)</strong></td>
+                <td style="text-align: center;">160.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,86,980</td>
+                <td style="text-align: right;">2,10,020</td>
+                <td style="text-align: right;"><strong>4,20,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">8,438</td>
+              </tr>
+              <tr>
+                <td><strong>B.Sc. in Civil Engineering (CE)</strong></td>
+                <td style="text-align: center;">164.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,91,995</td>
+                <td style="text-align: right;">2,15,005</td>
+                <td style="text-align: right;"><strong>4,30,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">8,646</td>
+              </tr>
+              <tr>
+                <td><strong>B.Sc. in CSE (For Diploma Holders)</strong></td>
+                <td style="text-align: center;">161.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,25,600</td>
+                <td style="text-align: right;">1,46,200</td>
+                <td style="text-align: right;"><strong>2,94,800</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">5,829</td>
+              </tr>
+              <tr>
+                <td><strong>B.Sc. in EEE (For Diploma Holders)</strong></td>
+                <td style="text-align: center;">160.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,34,000</td>
+                <td style="text-align: right;">1,54,000</td>
+                <td style="text-align: right;"><strong>3,11,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,167</td>
+              </tr>
+              <tr>
+                <td><strong>B.Sc. in CE (For Diploma Holders)</strong></td>
+                <td style="text-align: center;">164.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,37,000</td>
+                <td style="text-align: right;">1,56,750</td>
+                <td style="text-align: right;"><strong>3,16,750</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,286</td>
+              </tr>
+              <tr>
+                <td><strong>B.A Hons. in Islamic Studies</strong></td>
+                <td style="text-align: center;">145.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">60,000</td>
+                <td style="text-align: right;">77,000</td>
+                <td style="text-align: right;"><strong>1,60,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">3,021</td>
+              </tr>
+              <tr>
+                <td><strong>B.A Hons. in English</strong></td>
+                <td style="text-align: center;">144.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,40,000</td>
+                <td style="text-align: right;">1,67,000</td>
+                <td style="text-align: right;"><strong>3,30,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,563</td>
+              </tr>
+              <tr>
+                <td><strong>BSS in Journalism and Media Studies</strong></td>
+                <td style="text-align: center;">144.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,35,000</td>
+                <td style="text-align: right;">1,62,000</td>
+                <td style="text-align: right;"><strong>3,20,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,354</td>
+              </tr>
+              <tr>
+                <td><strong>BA (Honors) in Bangla</strong></td>
+                <td style="text-align: center;">144.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">85,000</td>
+                <td style="text-align: right;">92,000</td>
+                <td style="text-align: right;"><strong>2,00,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">3,854</td>
+              </tr>
+              <tr>
+                <td><strong>LL.B (Honors)</strong></td>
+                <td style="text-align: center;">144.00</td>
+                <td style="text-align: center;">8</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">1,50,000</td>
+                <td style="text-align: right;">1,77,000</td>
+                <td style="text-align: right;"><strong>3,50,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,979</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- পোস্টগ্র্যাজুয়েট টেবিল -->
+        <h3 style="color: var(--navy-color); margin-bottom: 15px;">Postgraduate Programs (মাস্টার্স ও ডিপ্লোমা)</h3>
+        <div class="table-responsive">
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Programs</th>
+                <th style="text-align: center;">Total Credit</th>
+                <th style="text-align: center;">Total Semester</th>
+                <th style="text-align: right;">Admission Fee</th>
+                <th style="text-align: right;">Registration Fee</th>
+                <th style="text-align: right;">Tuition Fee</th>
+                <th style="text-align: right;">Other Fee</th>
+                <th style="text-align: right;">Total Fee</th>
+                <th style="text-align: right;">Monthly Fee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Master of Business Admin (2-Years)</strong></td>
+                <td style="text-align: center;">60.00</td>
+                <td style="text-align: center;">4</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">65,000</td>
+                <td style="text-align: right;">62,000</td>
+                <td style="text-align: right;"><strong>1,50,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">5,375</td>
+              </tr>
+              <tr>
+                <td><strong>Executive MBA (EMBA)</strong></td>
+                <td style="text-align: center;">48.00</td>
+                <td style="text-align: center;">3</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">60,000</td>
+                <td style="text-align: right;">57,000</td>
+                <td style="text-align: right;"><strong>1,40,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,611</td>
+              </tr>
+              <tr>
+                <td><strong>Master of Business Admin (1-Year)</strong></td>
+                <td style="text-align: center;">39.00</td>
+                <td style="text-align: center;">2</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">40,000</td>
+                <td style="text-align: right;">37,000</td>
+                <td style="text-align: right;"><strong>1,00,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">6,417</td>
+              </tr>
+              <tr>
+                <td><strong>Master of Public Health (MPH)</strong></td>
+                <td style="text-align: center;">74.00</td>
+                <td style="text-align: center;">4</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">42,000</td>
+                <td style="text-align: right;">35,000</td>
+                <td style="text-align: right;"><strong>1,00,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">3,208</td>
+              </tr>
+              <tr>
+                <td><strong>MA in Islamic Studies (2-Years)</strong></td>
+                <td style="text-align: center;">63.00</td>
+                <td style="text-align: center;">4</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">32,000</td>
+                <td style="text-align: right;">30,000</td>
+                <td style="text-align: right;"><strong>85,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">2,604</td>
+              </tr>
+              <tr>
+                <td><strong>MA in Islamic Studies (1-Year)</strong></td>
+                <td style="text-align: center;">33.00</td>
+                <td style="text-align: center;">2</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">18,000</td>
+                <td style="text-align: right;">14,000</td>
+                <td style="text-align: right;"><strong>55,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">2,667</td>
+              </tr>
+              <tr>
+                <td><strong>MA in English</strong></td>
+                <td style="text-align: center;">39.00</td>
+                <td style="text-align: center;">2</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">25,000</td>
+                <td style="text-align: right;">22,000</td>
+                <td style="text-align: right;"><strong>70,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">3,667</td>
+              </tr>
+              <tr>
+                <td><strong>Bachelor of Education (B.Ed)</strong></td>
+                <td style="text-align: center;">36.00</td>
+                <td style="text-align: center;">2</td>
+                <td style="text-align: right;">10,000</td>
+                <td style="text-align: right;">5,000</td>
+                <td style="text-align: right;">7,000</td>
+                <td style="text-align: right;">5,000</td>
+                <td style="text-align: right;"><strong>27,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">1,500</td>
+              </tr>
+              <tr>
+                <td><strong>Master of Education (M.Ed)</strong></td>
+                <td style="text-align: center;">36.00</td>
+                <td style="text-align: center;">2</td>
+                <td style="text-align: right;">10,000</td>
+                <td style="text-align: right;">5,000</td>
+                <td style="text-align: right;">10,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;"><strong>33,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">1,875</td>
+              </tr>
+              <tr>
+                <td><strong>Masters in Development Studies (MDS)</strong></td>
+                <td style="text-align: center;">39.00</td>
+                <td style="text-align: center;">3</td>
+                <td style="text-align: right;">15,000</td>
+                <td style="text-align: right;">8,000</td>
+                <td style="text-align: right;">52,000</td>
+                <td style="text-align: right;">45,000</td>
+                <td style="text-align: right;"><strong>1,20,000</strong></td>
+                <td style="text-align: right; color: var(--primary-color);">5,556</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ফুটার -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-widget"><h3>Pundra University</h3><p class="footer-about-text">পুন্ড্র ইউনিভার্সিটি অব সায়েন্স অ্যান্ড টেকনোলজি (PUB)</p></div>
+        <div class="footer-widget"><h3>Quick Links</h3><ul class="footer-links-list"><li><a href="./tuition-fees.html">Tuition Fees</a></li><li><a href="./admission.html">Admission</a></li><li><a href="./scholarships.html">Scholarships</a></li></ul></div>
+        <div class="footer-widget"><h3>Useful Links</h3><ul class="footer-links-list"><li><a href="https://ugc.gov.bd/" target="_blank">UGC</a></li></ul></div>
+        <div class="footer-widget"><h3>Contact Us</h3><p style="color: #cbd5e1; font-size: 14px;">রংপুর রোড, বাঘোপাড়া, গোকুল, বগুড়া-৫৮০০।</p></div>
+      </div>
+    </div>
+    <div class="copyright-area"><div class="container"><p>© 2026 All Rights Reserved | Pundra University</p></div></div>
+  </footer>
+
+  <script src="../data/programs.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
