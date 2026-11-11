@@ -1,0 +1,268 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * Fonts (Montserrat + Unbounded) and Remix Icon are loaded with <link> tags in src/routes/__root.tsx.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Unbounded", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-alt: var(--primary-alt);
+  --color-primary-alt-2: var(--primary-alt-2);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Palette mirrors the reference portfolio (purple hue 255 on near-black navy). */
+:root {
+  --radius: 1rem;
+  --background: oklch(0.066 0.046 264.1); /* body  hsl(240 100% 2%) */
+  --foreground: oklch(0.959 0.003 286.3); /* title hsl(240 8% 95%) */
+  --card: oklch(0.165 0.005 285.8); /* container hsl(240 8% 6%) */
+  --card-foreground: oklch(0.959 0.003 286.3);
+  --popover: oklch(0.165 0.005 285.8);
+  --popover-foreground: oklch(0.959 0.003 286.3);
+  --primary: oklch(0.609 0.162 292.4); /* first hsl(255 60% 64%) */
+  --primary-foreground: oklch(0.959 0.003 286.3);
+  --primary-alt: oklch(0.507 0.247 284.8); /* hsl(255 80% 56%) */
+  --primary-alt-2: oklch(0.527 0.197 289.4); /* hsl(255 60% 56%) */
+  --primary-light: oklch(0.718 0.115 294.8); /* hsl(255 60% 74%) */
+  --secondary: oklch(0.165 0.005 285.8);
+  --secondary-foreground: oklch(0.959 0.003 286.3);
+  --muted: oklch(0.165 0.005 285.8);
+  --muted-foreground: oklch(0.749 0.017 286); /* text hsl(240 8% 70%) */
+  --subtle: oklch(0.571 0.031 285.4); /* text-light hsl(240 8% 50%) */
+  --accent: oklch(0.165 0.005 285.8);
+  --accent-foreground: oklch(0.959 0.003 286.3);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.609 0.162 292.4);
+  --chart-1: oklch(0.609 0.162 292.4);
+  --chart-2: oklch(0.507 0.247 284.8);
+  --chart-3: oklch(0.718 0.115 294.8);
+  --chart-4: oklch(0.527 0.197 289.4);
+  --chart-5: oklch(0.749 0.017 286);
+  --sidebar: oklch(0.165 0.005 285.8);
+  --sidebar-foreground: oklch(0.959 0.003 286.3);
+  --sidebar-primary: oklch(0.609 0.162 292.4);
+  --sidebar-primary-foreground: oklch(0.959 0.003 286.3);
+  --sidebar-accent: oklch(0.165 0.005 285.8);
+  --sidebar-accent-foreground: oklch(0.959 0.003 286.3);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.609 0.162 292.4);
+
+  --gradient-blob: linear-gradient(180deg, var(--primary) 0%, var(--primary-alt) 100%);
+  --gradient-blob-animate: linear-gradient(180deg, var(--primary-alt) 20%, var(--primary-light) 100%);
+  --gradient-header: linear-gradient(180deg, var(--background) 60%, transparent 100%);
+  --gradient-fade-bottom: linear-gradient(180deg, transparent 60%, var(--background) 92%);
+  --gradient-timeline: linear-gradient(180deg, transparent, var(--primary-alt-2));
+  --shadow-glow: 0 8px 32px color-mix(in oklab, var(--primary) 50%, transparent),
+    inset 8px -8px 30px var(--primary-alt-2);
+  --shadow-glow-strong: 0 8px 48px color-mix(in oklab, var(--primary) 70%, transparent),
+    inset 8px -8px 30px var(--primary-alt-2);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-muted-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-foreground);
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+}
+
+/* Section heading: white text with a purple <span>. */
+@utility section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-foreground);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  @media (min-width: 1150px) {
+    font-size: 2.25rem;
+  }
+  & span {
+    color: var(--color-primary);
+  }
+}
+
+/* Pill button with purple border and inner glow. */
+@utility btn-glow {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  border: 3px solid var(--color-primary);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-display);
+  font-weight: 600;
+  box-shadow: var(--shadow-glow);
+  transition: box-shadow 0.4s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: var(--shadow-glow-strong);
+  }
+}
+
+@utility blob {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 9999px;
+  background: var(--gradient-blob);
+  filter: blur(50px);
+  @media (min-width: 1150px) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@utility blob-animate {
+  position: absolute;
+  border-radius: 9999px;
+  background: var(--gradient-blob-animate);
+  filter: blur(35px);
+  animation: blob-spin 5s linear infinite;
+}
+
+@utility text-glow {
+  text-shadow: 0 8px 16px var(--color-primary);
+}
+
+@utility bg-header {
+  background: var(--gradient-header);
+}
+
+@utility fade-bottom {
+  background: var(--gradient-fade-bottom);
+}
+
+@utility timeline-line {
+  background: var(--gradient-timeline);
+}
+
+/* "Full Stack" word fades into black at its bottom, like the reference. */
+@utility profession-fade {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, var(--color-background) 10%, transparent 60%);
+  }
+}
+
+@utility marquee-mask {
+  mask-image: linear-gradient(90deg, transparent 0%, black 18%, black 82%, transparent 100%);
+}
+
+@utility animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@utility animate-marquee-reverse {
+  animation: marquee 32s linear infinite reverse;
+}
+
+@keyframes blob-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 1.6s cubic-bezier(0.5, 0, 0, 1),
+    transform 1.6s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
